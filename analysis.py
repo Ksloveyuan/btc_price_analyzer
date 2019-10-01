@@ -37,13 +37,13 @@ if __name__ == '__main__':
     line1.add_xaxis(time).set_series_opts(type='time')
     for ma in ma_list:
         ma_str = str(ma)
-        line1.add_yaxis("GMA_"+ma_str,price_data['GMA_'+ma_str].tolist(),yaxis_index=0)
+        line1.add_yaxis("GMA_"+ma_str,price_data['GMA_'+ma_str].tolist(),yaxis_index=0, is_symbol_show=False)
 
     line2 = Line()
     line2.add_xaxis(time).set_series_opts(type='time')
     for ma in ma_list:
         ma_str = str(ma)
-        line2.add_yaxis("GMA_Ratio_"+ma_str,price_data['GMA_Ratio_'+ma_str].tolist(),yaxis_index=1)
+        line2.add_yaxis("GMA_Ratio_"+ma_str,price_data['GMA_Ratio_'+ma_str].tolist(),yaxis_index=1, is_symbol_show=False)
 
     line1.extend_axis(yaxis=opts.AxisOpts())
     candle.extend_axis(yaxis=opts.AxisOpts())
@@ -55,7 +55,7 @@ if __name__ == '__main__':
             # type_="log",
             splitline_opts=opts.SplitLineOpts(is_show=True), 
             is_scale=True,),
-        tooltip_opts=opts.TooltipOpts(trigger="axis", trigger_on="click"),
+        tooltip_opts=opts.TooltipOpts(trigger="axis", trigger_on="mousemove"),
         datazoom_opts=[
             opts.DataZoomOpts(xaxis_index=0, range_start=80, range_end=100)
         ],)
