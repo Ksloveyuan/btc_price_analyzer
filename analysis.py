@@ -18,6 +18,8 @@ if __name__ == '__main__':
                              parse_dates=True,
                              infer_datetime_format=True)
 
+    price_data = price_data.sort_index(axis=0, ascending=True)
+
     price_data['Candle_Data'] = price_data.apply(
         lambda x: [x['openprice'], x['closeprice'], x['low'], x['high']],
         axis=1)
@@ -27,7 +29,7 @@ if __name__ == '__main__':
     for ma in ma_list:
         ma_str = str(ma)
         price_data['GMA_' + ma_str] = price_data['closeprice'].rolling(
-            window=ma, center=True, min_periods=1).apply(gmean, raw=True)
+            window=ma, min_periods=1).apply(gmean, raw=True)
 
     for ma in ma_list:
         ma_str = str(ma)
@@ -37,7 +39,6 @@ if __name__ == '__main__':
     price_data["Predict_Ratio"] = price_data.apply(
         lambda x: close_ratio(x['closeprice'], x['predictprice']), axis=1)
 
-    price_data = price_data.sort_index(axis=0, ascending=True)
 
     time = price_data.index.tolist()
 
