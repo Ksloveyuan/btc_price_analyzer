@@ -5,13 +5,51 @@
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+    
 </head>
 <body>
-    <div id="b7a7714896e3440c8c887c7a3fe15453" class="chart-container" style="width:900px; height:500px;"></div>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'eaa7a41397084ffd83f4656409033276')">overall</button>
+            <button class="tablinks" onclick="showChart(event, 'd245d0d60e3f4c32bc2f720bb696043f')">ratio distribution</button>
+    </div>
+
+    <div class="box">
+                <div id="eaa7a41397084ffd83f4656409033276" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_b7a7714896e3440c8c887c7a3fe15453 = echarts.init(
-            document.getElementById('b7a7714896e3440c8c887c7a3fe15453'), 'white', {renderer: 'canvas'});
-        var option_b7a7714896e3440c8c887c7a3fe15453 = {
+        var chart_eaa7a41397084ffd83f4656409033276 = echarts.init(
+            document.getElementById('eaa7a41397084ffd83f4656409033276'), 'white', {renderer: 'canvas'});
+        var option_eaa7a41397084ffd83f4656409033276 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -9452,6 +9490,18 @@
                 [
                     "2019-10-03T00:00:00",
                     10345.983273312153
+                ],
+                [
+                    "2019-10-04T00:00:00",
+                    10298.076330840588
+                ],
+                [
+                    "2019-10-05T00:00:00",
+                    10265.347641877881
+                ],
+                [
+                    "2019-10-06T00:00:00",
+                    10220.889763748255
                 ]
             ],
             "hoverAnimation": true,
@@ -18875,6 +18925,18 @@
                 [
                     "2019-10-03T00:00:00",
                     8099.502183231622
+                ],
+                [
+                    "2019-10-04T00:00:00",
+                    8128.285837893343
+                ],
+                [
+                    "2019-10-05T00:00:00",
+                    8156.852765759368
+                ],
+                [
+                    "2019-10-06T00:00:00",
+                    8184.646554608117
                 ]
             ],
             "hoverAnimation": true,
@@ -28298,6 +28360,18 @@
                 [
                     "2019-10-03T00:00:00",
                     9781.301535345778
+                ],
+                [
+                    "2019-10-04T00:00:00",
+                    9795.876802498678
+                ],
+                [
+                    "2019-10-05T00:00:00",
+                    9810.470068155972
+                ],
+                [
+                    "2019-10-06T00:00:00",
+                    9825.081349951535
                 ]
             ],
             "hoverAnimation": true,
@@ -37721,6 +37795,18 @@
                 [
                     "2019-10-03T00:00:00",
                     0.7887155201622179
+                ],
+                [
+                    "2019-10-04T00:00:00",
+                    0.7946257381578418
+                ],
+                [
+                    "2019-10-05T00:00:00",
+                    0.7923784273819301
+                ],
+                [
+                    "2019-10-06T00:00:00",
+                    0.7864913820430472
                 ]
             ],
             "hoverAnimation": true,
@@ -47176,6 +47262,18 @@
                 [
                     "2019-10-03T00:00:00",
                     1.0074739649917874
+                ],
+                [
+                    "2019-10-04T00:00:00",
+                    1.006745661902174
+                ],
+                [
+                    "2019-10-05T00:00:00",
+                    0.9972032418121937
+                ],
+                [
+                    "2019-10-06T00:00:00",
+                    0.9821611308889187
                 ]
             ],
             "hoverAnimation": true,
@@ -56631,6 +56729,18 @@
                 [
                     "2019-10-03T00:00:00",
                     0.8342486477400614
+                ],
+                [
+                    "2019-10-04T00:00:00",
+                    0.8353633544995887
+                ],
+                [
+                    "2019-10-05T00:00:00",
+                    0.8291182751173632
+                ],
+                [
+                    "2019-10-06T00:00:00",
+                    0.8181755885450915
                 ]
             ],
             "hoverAnimation": true,
@@ -70778,6 +70888,24 @@
                     8160.037579000001,
                     8150.578353,
                     8411.545568000001
+                ],
+                [
+                    8176.379236,
+                    8183.116506,
+                    8096.834284999999,
+                    8299.402563
+                ],
+                [
+                    8164.143084,
+                    8134.040021,
+                    8080.611137999999,
+                    8245.028139
+                ],
+                [
+                    8123.135944,
+                    8038.641716,
+                    7943.841642,
+                    8220.807925
                 ]
             ]
         }
@@ -73183,12 +73311,16 @@
                 "2019-09-30T00:00:00",
                 "2019-10-01T00:00:00",
                 "2019-10-02T00:00:00",
-                "2019-10-03T00:00:00"
+                "2019-10-03T00:00:00",
+                "2019-10-04T00:00:00",
+                "2019-10-05T00:00:00",
+                "2019-10-06T00:00:00"
             ]
         }
     ],
     "yAxis": [
         {
+            "type": "log",
             "show": true,
             "scale": true,
             "nameLocation": "end",
@@ -73237,13 +73369,15 @@
     "visualMap": {
         "show": true,
         "type": "continuous",
-        "min": 0.2,
+        "min": 0.6,
         "max": 2,
         "inRange": {
             "color": [
-                "#50a3ba",
-                "#eac763",
-                "#d94e5d"
+                "red",
+                "yellow",
+                "orange",
+                "green",
+                "blue"
             ]
         },
         "calculable": true,
@@ -73255,7 +73389,7 @@
         ],
         "orient": "vertical",
         "top": 30,
-        "right": 10,
+        "right": 0,
         "showLabel": true,
         "outOfRange": {
             "color": "#999999"
@@ -73274,7 +73408,240 @@
         }
     ]
 };
-        chart_b7a7714896e3440c8c887c7a3fe15453.setOption(option_b7a7714896e3440c8c887c7a3fe15453);
+        chart_eaa7a41397084ffd83f4656409033276.setOption(option_eaa7a41397084ffd83f4656409033276);
+    </script>
+                <div id="d245d0d60e3f4c32bc2f720bb696043f" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_d245d0d60e3f4c32bc2f720bb696043f = echarts.init(
+            document.getElementById('d245d0d60e3f4c32bc2f720bb696043f'), 'white', {renderer: 'canvas'});
+        var option_d245d0d60e3f4c32bc2f720bb696043f = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "GMA_Ratio_100",
+            "data": [
+                0.00467687074829932,
+                0.11054421768707483,
+                0.3056972789115646,
+                0.2687074829931973,
+                0.1441326530612245,
+                0.06972789115646258,
+                0.041666666666666664,
+                0.01488095238095238,
+                0.039965986394557826
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "GMA_Ratio_200",
+            "data": [
+                0.017431972789115645,
+                0.1483843537414966,
+                0.21768707482993196,
+                0.1870748299319728,
+                0.1326530612244898,
+                0.07397959183673469,
+                0.050170068027210885,
+                0.04846938775510204,
+                0.12414965986394558
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "Predict_Ratio",
+            "data": [
+                0.34906462585034015,
+                0.0858843537414966,
+                0.03486394557823129,
+                0.08843537414965986,
+                0.07397959183673469,
+                0.060799319727891155,
+                0.050170068027210885,
+                0.027210884353741496,
+                0.22959183673469388
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "GMA_Ratio_100",
+                "GMA_Ratio_200",
+                "Predict_Ratio"
+            ],
+            "selected": {
+                "GMA_Ratio_100": true,
+                "GMA_Ratio_200": true,
+                "Predict_Ratio": true
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "[0,0.6)",
+                "[0.6,0.8)",
+                "[0.8,1)",
+                "[1,1.2)",
+                "[1.2,1.4)",
+                "[1.4,1.6)",
+                "[1.6,1.8)",
+                "[1.8,2)",
+                "[2,...)"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ]
+};
+        chart_d245d0d60e3f4c32bc2f720bb696043f.setOption(option_d245d0d60e3f4c32bc2f720bb696043f);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 </body>
 </html>
