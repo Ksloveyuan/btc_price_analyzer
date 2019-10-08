@@ -14,7 +14,7 @@ def close_ratio(close, base):
 if __name__ == '__main__':
     price_data = pd.read_csv('price.csv',
                              index_col=0,
-                             parse_dates=True,
+                             parse_dates=False,
                              infer_datetime_format=True)
 
     price_data = price_data.sort_index(axis=0, ascending=True)
