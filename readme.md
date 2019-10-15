@@ -1,5 +1,7 @@
 # Bitcoin投资时机
 完美重现九神[《囤比特币：寻找合适的够买时机》](https://weibo.com/ttarticle/p/show?id=2309404292613674022595)一文的分析方法。
+ 
+在线体现地址：[demo](https://ksloveyuan.github.io/page/btc_price_analyzer/) 
 
 ![价格指标](https://i.loli.net/2019/10/07/cn3TKYwEsqpJ6QV.png)
 
